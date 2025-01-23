@@ -25,9 +25,9 @@
         <button class="btn">Click me</button>
     </div>
     <script>
-        $(document).ready(()=>{
-            $(".btn").click(()=>{
-                $("#box").css("background-color","red");
+        $(document).ready(()=>{//this will ensure that html fully loaded then js/jQuery will code run.
+            $(".btn").click(()=>{//here we add the event listener on the button. And the event is click.
+                $("#box").css("background-color","red");//here when the button clicked then all div area got colored.
             })
         })
     </script>
