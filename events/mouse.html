@@ -33,8 +33,12 @@
             })
 
             //Double Click Event 
-            $(".btn").dblclick(()=>{
-                $('#box').css("background-color","yellow");
+            // $(".btn").dblclick(()=>{
+            //     $('#box').css("background-color","yellow");
+            // })
+            //Now we will see the contextmenu
+            $(".btn").contextmenu(()=>{
+                $("#box").css("background-color","blue");
             })
         })
     </script>
