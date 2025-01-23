@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event using jQuery</title>
+    <style>
+       h1{
+        text-align: center;
+       }
+       #box{
+        text-align: center;
+       }
+       .btn{
+        padding: 10px;
+        border: 3px solid orange;
+       }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>Hello, This is mouse event using JQuery.</h1>
+    <div id="box">
+        <h3>This is our div</h3>
+        <button class="btn">Click me</button>
+    </div>
+    <script>
+        $(document).ready(()=>{
+            $(".btn").click(()=>{
+                $("#box").css("background-color","red");
+            })
+        })
+    </script>
+</body>
+</html>
