@@ -26,14 +26,13 @@
     </div>
 
     <script>
-        // Wait for the document to be fully loaded before running the script
         $(document).ready(() => {
 
             // Handle a single click event on the button
             $(".btn").click(() => {
                 // Change the background color of the div with id 'box' to red when the button is clicked
                 $("#box").css("background-color", "red");
-                
+
                 // Get the inner HTML content of the #box div and log it to the console
                 let a = $("#box").html();
                 console.log(a); // Output: <h3>This is our div</h3><button class="btn">Click me</button>
@@ -76,6 +75,23 @@
                 // Change the background color of the #box div to brown
                 $('#box').css("background-color", "brown");
             });
+
+            // Handle mouse wheel (scroll) event
+            $(document).on('wheel', (event) => {
+                // Log a message to the console whenever the mouse wheel is scrolled
+                console.log("Mouse wheel scrolled!");
+            });
+
+            // Track mouse position with debounce to optimize performance
+            let debounceTimer;
+            $(".btn").mousemove((event) => {
+                clearTimeout(debounceTimer); // Clear the previous debounce timer
+                debounceTimer = setTimeout(() => {
+                    // Log the mouse position only after the user stops moving the mouse for a moment
+                    console.log("Mouse position: X: " + event.pageX + " Y: " + event.pageY);
+                }, 200); // 200ms debounce delay
+            });
+
         });
     </script>
 </body>
