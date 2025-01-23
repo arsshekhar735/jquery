@@ -28,6 +28,13 @@
         $(document).ready(()=>{//this will ensure that html fully loaded then js/jQuery will code run.
             $(".btn").click(()=>{//here we add the event listener on the button. And the event is click.
                 $("#box").css("background-color","red");//here when the button clicked then all div area got colored.
+                let a = $("#box").html();
+                console.log(a); 
+            })
+
+            //Double Click Event 
+            $(".btn").dblclick(()=>{
+                $('#box').css("background-color","yellow");
             })
         })
     </script>
