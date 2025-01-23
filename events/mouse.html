@@ -15,6 +15,11 @@
         padding: 10px;
         border: 3px solid orange;
        }
+       #text{
+        height:200px;
+        width: 200px;
+        overflow: auto;
+       }
     </style>
 </head>
 <script src="/jquery/jquery.js"></script>
@@ -22,7 +27,11 @@
     <h1>Hello, This is mouse event using JQuery.</h1>
     <div id="box">
         <h3>This is our div</h3>
-        <button class="btn">Click me</button>
+        <button class="btn">Click me <span id="sparea"></span></button>
+    </div>
+    <div id="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate adipisci consectetur facilis iste eligendi alias tempora dolor distinctio nemo deleniti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque, sit inventore totam culpa vitae, voluptatum quo vero ut debitis a? Quibusdam sit minima culpa, fugiat voluptatum earum voluptas dolorum!
     </div>
 
     <script>
@@ -91,6 +100,10 @@
                     console.log("Mouse position: X: " + event.pageX + " Y: " + event.pageY);
                 }, 200); // 200ms debounce delay
             });
+            let i = 0;
+            $('#text').scroll(()=>{
+                $('#sparea').text(i += 1);
+            })
 
         });
 //         Explanation of Mouse Events in jQuery
