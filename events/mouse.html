@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Event using jQuery</title>
     <style>
-       h1{
+       h1 {
         text-align: center;
        }
-       #box{
+       #box {
         text-align: center;
        }
-       .btn{
+       .btn {
         padding: 10px;
         border: 3px solid orange;
        }
@@ -24,23 +24,59 @@
         <h3>This is our div</h3>
         <button class="btn">Click me</button>
     </div>
-    <script>
-        $(document).ready(()=>{//this will ensure that html fully loaded then js/jQuery will code run.
-            $(".btn").click(()=>{//here we add the event listener on the button. And the event is click.
-                $("#box").css("background-color","red");//here when the button clicked then all div area got colored.
-                let a = $("#box").html();
-                console.log(a); 
-            })
 
-            //Double Click Event 
-            // $(".btn").dblclick(()=>{
-            //     $('#box').css("background-color","yellow");
-            // })
-            //Now we will see the contextmenu
-            $(".btn").contextmenu(()=>{
-                $("#box").css("background-color","blue");
-            })
-        })
+    <script>
+        // Wait for the document to be fully loaded before running the script
+        $(document).ready(() => {
+
+            // Handle a single click event on the button
+            $(".btn").click(() => {
+                // Change the background color of the div with id 'box' to red when the button is clicked
+                $("#box").css("background-color", "red");
+                
+                // Get the inner HTML content of the #box div and log it to the console
+                let a = $("#box").html();
+                console.log(a); // Output: <h3>This is our div</h3><button class="btn">Click me</button>
+            });
+
+            // Handle a double click event on the button
+            $(".btn").dblclick(() => {
+                // Change the background color of the #box div to yellow when the button is double-clicked
+                $('#box').css("background-color", "yellow");
+            });
+
+            // Handle the context menu (right-click) event on the button
+            $(".btn").contextmenu((event) => {
+                // Prevent the default context menu from showing up
+                event.preventDefault();
+                // Change the background color of the #box div to blue when right-clicked
+                $("#box").css("background-color", "blue");
+            });
+
+            // Handle mouse enter event when the mouse enters the button area
+            $(".btn").mouseenter(() => {
+                // Change the background color of the #box div to purple
+                $('#box').css("background-color", "purple");
+            });
+
+            // Handle mouse leave event when the mouse leaves the button area
+            $(".btn").mouseleave(() => {
+                // Change the background color of the #box div to orange
+                $('#box').css("background-color", "orange");
+            });
+
+            // Handle mouse move event when the mouse moves over the button
+            $(".btn").mousemove(() => {
+                // Change the background color of the #box div to red while moving the mouse over the button
+                $('#box').css("background-color", "red");
+            });
+
+            // Handle mouse up event when the mouse button is released after clicking
+            $(".btn").mouseup(() => {
+                // Change the background color of the #box div to brown
+                $('#box').css("background-color", "brown");
+            });
+        });
     </script>
 </body>
 </html>
