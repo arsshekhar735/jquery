@@ -33,12 +33,25 @@
             })
 
             //Double Click Event 
-            // $(".btn").dblclick(()=>{
-            //     $('#box').css("background-color","yellow");
-            // })
+            $(".btn").dblclick(()=>{
+                $('#box').css("background-color","yellow");
+            })
             //Now we will see the contextmenu
             $(".btn").contextmenu(()=>{
                 $("#box").css("background-color","blue");
+            })
+            //Now we will see the Mouse Enter
+            $(".btn").mouseenter(()=> {
+                $('#box').css("background-color","purple");
+            })
+            $(".btn").mouseleave(()=> {
+                $('#box').css("background-color","orange");
+            })
+            $(".btn").mousemove(()=> {
+                $('#box').css("background-color","red");
+            })
+            $(".btn").mouseup(()=> {
+                $('#box').css("background-color","brown");
             })
         })
     </script>
