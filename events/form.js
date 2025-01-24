@@ -13,7 +13,7 @@ $(document).ready(()=>{
     $("#exampleInputEmail1,#exampleInputPassword1").select(function(){
         $(this).css("background","yellow");
     })
-    $("#sumbtn").sumbit(function(){
-        alert("You have Successfully sumbitted the form\nRadhe Radhe");
+    $("#myform").submit(function(){
+        alert("You have Successfully sumbitted the form.\nRadhe Radhe");
     })
 })
