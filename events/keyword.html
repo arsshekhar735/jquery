@@ -11,7 +11,23 @@
     <script>
         
         $(document).ready(()=>{
-            
+            // $('body').keypress(()=>{
+            //     $('body').css("background","red");
+            // })
+            //Change the color only when we click the arrow up button
+            $("body").keyup((event)=>{
+                if(event.key == "ArrowUp"){
+                    $("body").css("background","orange");
+                }
+                
+            })
+            //Now chnage the change the color when we press the R.
+            $('body').keypress((event)=>{
+                if(event.key=="R"){
+                    $('body').css("background","skyblue");
+                }
+            })
+
         })
     </script>
 </body>
