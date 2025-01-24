@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the box container */
+#box {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional classes for box styling */
+.mydiv {
+    padding: 10px;
+}
+
+.test {
+    border: 2px solid #66cc66;
+}
+
+/* Style for the h3 inside the box */
+#box h3 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Style for the unordered list inside the box */
+#box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#box ul li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for list items */
+#box ul li:hover {
+    background-color: #e9f9e9;
+    cursor: pointer;
+}
