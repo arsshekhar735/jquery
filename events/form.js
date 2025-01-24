@@ -1,3 +1,3 @@
 $(document).ready(()=>{
-    console.log($);
+    console.log("Radhe Radhe");
 })
