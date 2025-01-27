@@ -61,16 +61,67 @@
         #mybtn:hover {
             background-color: #45a049;
         }
+        /* Container to keep the content centered */
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
 
+        /* Style for the buttons container (top right positioning) */
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Style for the buttons */
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark button style */
+        #dark {
+            background-color: #333;
+            color: white;
+        }
+
+        #dark:hover {
+            background-color: #555;
+        }
+
+        /* Light button style */
+        #light {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        #light:hover {
+            background-color: #ccc;
+        }
     </style>
 </head>
 <script src="/jquery/jquery.js"></script>
 <body>
+    <div class="container">
+        <div class="button-container">
+            <button type="button" id="dark">Dark</button>
+            <button type="button" id="light">Light</button>
+        </div>
+    </div>
     <h1>CSS & Class Methods</h1>
     <div id="box">
         <p id="mypara">"यदा यदा हि धर्मस्य ग्लानिर्भवति भारत | अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥"</p>
         <button id="mybtn">Click Me</button>
     </div>
+
     <script src="css.js"></script>
 </body>
 </html>
