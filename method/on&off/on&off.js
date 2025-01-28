@@ -1,3 +1,13 @@
 $(document).ready(function(){
-    
+    $("#box").on({
+        click:function(){
+            $(this).css("background-color","red");
+        },
+        mouseenter:function(){
+            $(this).css("background-color","orange");
+        },
+        mouseleave:function(){
+            $(this).css("background-color","skyblue");
+        }
+    })
 })
