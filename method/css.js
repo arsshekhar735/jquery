@@ -12,6 +12,9 @@ $(document).ready(function(){
         $('#box').removeClass("red");
        
     })
+    $('#mybtn3').click(function(){
+        $("#box").toggleClass("red");
+    })
     $('#dark').click(function(){
         $('#box #mypara').css({
             
