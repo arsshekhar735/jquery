@@ -10,4 +10,8 @@ $(document).ready(function(){
             $(this).css("background-color","skyblue");
         }
     })
+    $("#mybtn").click(function(){
+        $("#box").off("click");
+        $("#mybtn").text("You have made the off");
+    })
 })
