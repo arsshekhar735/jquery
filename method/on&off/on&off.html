@@ -3,9 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On&Off Method in jQuery</title>
+    <title>CSS & Class Methods</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Box styling */
+        #box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        #box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Paragraph styling */
+        #mypara {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        /* Button styling */
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s ease;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        /* Button Hover Effects */
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Default Button Styles */
+        #mybtn, #mybtn2, #mybtn3 {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #mybtn:hover, #mybtn2:hover, #mybtn3:hover {
+            background-color: #45a049;
+        }
+
+        /* Dark Mode Button */
+        #dark {
+            background-color: #333;
+            color: white;
+        }
+
+        #dark:hover {
+            background-color: #555;
+        }
+
+        /* Light Mode Button */
+        #light {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        #light:hover {
+            background-color: #ccc;
+        }
+
+        /* Additional Styles for Red and Green Classes */
+        .red {
+            background-color: orange !important;
+            color: yellow !important;
+        }
+
+        .green {
+            background-color: #00bcd4;
+            color: white;
+        }
+
+        /* Button Container Styles */
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #box {
+                width: 95%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
 </head>
+<script src="/jquery/jquery.js"></script>
 <body>
-    <h1>On&Off Method in jQuery</h1>
+
+    <div class="button-container">
+        <button type="button" id="dark">Dark Mode</button>
+        <button type="button" id="light">Light Mode</button>
+    </div>
+
+    <h1>This is ON & OFF Methods</h1>
+
+    <div id="box">
+        <p id="mypara">"यदा यदा हि धर्मस्य ग्लानिर्भवति भारत | अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥"</p>
+        <button id="mybtn">Click Me To Add Red Class</button>
+        <button id="mybtn2">Click Me To Remove Red Class</button>
+        <button id="mybtn3">Click Me To Toggle Class</button>
+    </div>
+
+    
+    <script src="on&off.js"></script>
 </body>
 </html>
